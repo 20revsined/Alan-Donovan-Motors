@@ -19,13 +19,13 @@ class Vehicle():
 		return self.NumPassengers
 
 class Boat(Vehicle):
-	def __init__(self):
-		pass
 	def __init__(self, speed, AmountGas, KPL, NumPassengers, isAfloat):
 		Vehicle(speed, AmountGas, KPL, NumPassengers)
 		self.isAfloat = isAfloat
+	def __init__(self):
+		self.__init__(0, 0, 0, 0, True)
 
-	def Floating():
+	def Floating(self):
 		return self.isAfloat
 
 class Car(Vehicle):
@@ -41,7 +41,7 @@ class Airplane(Vehicle):
 		Vehicle(speed, AmountGas, KPL, NumPassengers)
 		self.isFlying = isFlying
 
-	def Flying():
+	def Flying(self):
 		return self.isFlying
 
 def carFunction():
@@ -69,4 +69,7 @@ if vehicle == "car":
 	switcher.get(vehicle)()
 
 elif vehicle == "boat":
+	switcher.get(vehicle)()
+
+elif vehicle == "airplane":
 	switcher.get(vehicle)()
