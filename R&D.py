@@ -31,8 +31,8 @@ class Car(Vehicle):
     def __init__(self, speed, AmountGas, KPL, NumPassengers):
         Vehicle(speed, AmountGas, KPL, NumPassengers)
 
-    def getSpeed()
-    	return Vehicle.getSpeed()
+    def getSpeed(self):
+    	return Vehicle.getSpeed(self)
 
 
 class Airplane(Vehicle):
@@ -87,7 +87,7 @@ vehicle = str(input(
     "Welcome to Alan Donovan Motors Testing Department! Please enter what type of vehicle you will be testing today."))
 if vehicle == "car":
     switcher.get(vehicle)()
-    print(car.getspeed())
+    print(car.getSpeed())
 
 
 elif vehicle == "boat":
