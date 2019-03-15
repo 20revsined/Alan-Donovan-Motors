@@ -22,21 +22,15 @@ class Boat(Vehicle):
 	def __init__(self, speed, AmountGas, KPL, NumPassengers, isAfloat):
 		Vehicle(speed, AmountGas, KPL, NumPassengers)
 		self.isAfloat = isAfloat
-	def __init__(self):
-		self.__init__(0, 0, 0, 0, True)
 
 	def Floating(self):
 		return self.isAfloat
 
 class Car(Vehicle):
-	def __init__(self):
-		pass
 	def __init__(self, speed, AmountGas, KPL, NumPassengers):
 		Vehicle(speed, AmountGas, KPL, NumPassengers)
 
 class Airplane(Vehicle):
-	def __init__(self):
-		pass
 	def __init__(self, speed, AmountGas, KPL, NumPassengers, isFlying):
 		Vehicle(speed, AmountGas, KPL, NumPassengers)
 		self.isFlying = isFlying
